@@ -114,8 +114,8 @@ ubunto@ubuntu:~/holbertonschool-simple_shell$
 |main.h|holds prototypes of functions spread across all files|
 |main.c|holds main process code|
 |handle_path.c|handling path from environment variables|
-|print_env.c|printing environment variables with their values|
-|strcat.c|concatting two different strings|
+|built_functions.c|different build functions|
+|fork.c|executing fork function|
 |trim.c|deleting white spaces from string|
 |man_1_simple_shell|custom manpage for simple shell|
 ## Requirements
