@@ -1,0 +1,78 @@
+#!/bin/bash
+.TH SIMPLE_SHELL 1 "23 August 2024" "1.0" "hsh manual page"
+.SH NAME
+simple_shell \- simple shell application
+.SH SYNOPSIS
+.B The shell is executed by typing ./hsh
+.SH DESCRIPTION
+Shell is a UNIX term for the interactive user interface with an operating system. The shell is the layer of programming that understands
+and executes the commands a user enters. In some systems, the shell is called a command interpreter. A shell usually implies an interface
+with a command syntax.
+.br
+.B What ./hsh can do :
+.br
+- Executes any command with its arguments
+.br
+- Executes built-in commands
+.br
+- Handle pipes
+.br
+- Handle the command seperator
+.br
+- Handle && and || logical operators
+.br
+- handle variable replacement
+.br
+- handle the $? variable
+.br
+- handle the $$ variable
+.br
+Overview
+
+The simple shell is a command that reads lines from either a file or the terminal, interprets them, and generally executes other commands. It is the program that is started when a user logs into the system. It incorporates many features to aid interactive use and has the advantage that the interpretative language is common to both interactive and non-interactive use (shell scripts). That is, commands can be typed directly to the running simple shell or can be put into a file, which can be executed directly by the simple shell.
+.SH BUILT-IN FUNCTIONS
+Those are the available built-in functions :
+.br
+ - exit : exit the shell
+.br
+ - cd : Change Directory
+.br
+ - ls : List The Files
+.br
+ - pwd :  Output The Full Path Name Of Your Current Directory
+.br
+ - env : Display the environment variables
+.SH PATH
+It will look inside al directions in PATH env variable for executable.
+.SH OPTIONS
+There are no options for the moment.
+.SH EXIT STATUS
+The exit value depends on how a function has terminated. Every error is identified by a certain value. On success it will always return 0.
+.SH RETURN VALUE
+Return 0 on success, otherwise it will return the exit value.
+.SH SYNTAX
+[command] [options]
+.SH EXAMPLE
+.B Two ways to execute our shell :
+.br
+.br
+.B The intercative mode :
+.br
+ $ ./hsh
+.br
+/bin/ls
+.br
+ hsh main.c shell.c
+.br
+exit
+.br
+.br
+.B The non-interactive mode :
+.br
+ $ echo "/bin/ls" | ./hsh
+.br
+ hsh main.c shell.c
+.SH BUGS
+Single space required after argument.
+.SH AUTHOR
+Cavid Agazade, Metin Abbaszade.
